@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #868686;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* BARRA DE NAVEGACION */
+header {
+    background-color: #141414;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    z-index: 9999;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.menu--layout {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menu__logo {
+    font-size: 2em;
+    font-family: "Alfa Slab One", cursive;
+    line-height: 65px;
+    letter-spacing: 1.5px;
+    padding: 0 0.5rem;
+}
+
+.menu__logo:hover {
+    color: #e93e74;
+}
+
+.btn__carrito {
+    width: 100px;
+    background-color: #141414;
+    border: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 2rem;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main .titulo {
+    font-size: 2.2em;
+    padding: 1rem;
+}
+
+main .contenedor {
+    padding: 2rem 0;
+    width: 60vw;
+    border-radius: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+main .contenedor .producto {
+    text-align: center;
+    padding-top: 50px;
+    color: aliceblue;
+}
+
+main .contenedor .producto img {
+    width: 300px;
+    border-radius: 15px;
+}
+
+main .contenedor .producto p {
+    font-size: 2.2em;
+    padding-bottom: 15px;
+}
+
+main .contenedor .producto a {
+    font-size: 1.5em;
+    color: aliceblue;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 35px;
+}
+
+main .contenedor .producto a:hover {
+    background: #333232;
+}
