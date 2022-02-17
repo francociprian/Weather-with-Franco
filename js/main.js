@@ -159,6 +159,7 @@ mostrarStockCompleto();
 //     continuar = prompt("¿Quieres hacer algo mas? \n\nSi \nNo.");
 // } while (continuar == "si")
 
+//Boton Carrito
 
 const btnCarrito = document.querySelector('button.btn__carrito');
 
@@ -169,18 +170,9 @@ btnCarrito.addEventListener('click', ()=> {
         showConfirmButton: false,
         background: '#fff',
         backdrop: `#141414da`,
-
     })
-
-    // Swal.fire({
-    //     title:  'Productos en el carrito:',
-    //     width: 600,
-    //     padding: '3em',
-    //     color: '#716add',
-    //     background: '#fff url(/images/trees.png)',
-    //     backdrop: `#141414da`
-    // })
 });
+//Agregar productos
 
 const agregarAlCarrito = document.querySelectorAll('div a');
 
