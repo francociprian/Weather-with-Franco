@@ -65,63 +65,63 @@ const stockProductos = [{
 {
     id: 10,
     name: "Campera S",
-    img: "img/campera.jpg",
+    img: "../img/campera.jpg",
     price: 110,
     size: "S"
 },
 {
     id: 11,
     name: "Campera M",
-    img: "img/campera.jpg",
+    img: "../img/campera.jpg",
     price: 110,
     size: "M"
 },
 {
     id: 12,
     name: "Campera L",
-    img: "img/campera.jpg",
+    img: "../img/campera.jpg",
     price: 110,
     size: "L"
 },
 {
     id: 13,
     name: "Campera XL",
-    img: "img/campera.jpg",
+    img: "../img/campera.jpg",
     price: 110,
     size: "XL"
 },
 {
     id: 14,
     name: "Pantalon S",
-    img: "img/pantalon.jpg",
+    img: "../img/pantalon.jpg",
     price: 75,
     size: "S"
 },
 {
     id: 15,
     name: "Pantalon M",
-    img: "img/pantalon.jpg",
+    img: "../img/pantalon.jpg",
     price: 75,
     size: "M"
 },
 {
     id: 16,
     name: "Pantalon L",
-    img: "img/pantalon.jpg",
+    img: "../img/pantalon.jpg",
     price: 75,
     size: "L"
 },
 {
     id: 17,
     name: "Pantalon XL",
-    img: "img/pantalon.jpg",
+    img: "../img/pantalon.jpg",
     price: 75,
     size: "XL"
 },
 {
     id: 18,
     name: "Sneakers",
-    img: "img/zapatillas.jpg",
+    img: "../img/zapatillas.jpg",
     price: 90,
     size: " "
 }
