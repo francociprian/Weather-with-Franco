@@ -2,126 +2,126 @@
 const stockProductos = [{
         id: 1,
         name: "Gorra",
-        img: "../img/gorra.jpg",
+        img: "img/gorra.jpg",
         price: 15,
         size: " "
     },
     {
         id: 2,
         name: "Remera S",
-        img: "../img/remera.jpg",
+        img: "img/remera.jpg",
         price: 35,
         size: "S"
     },
     {
         id: 3,
         name: "Remera M",
-        img: "../img/remera.jpg",
+        img: "img/remera.jpg",
         price: 35,
         size: "M"
     },
     {
         id: 4,
         name: "Remera L",
-        img: "../img/remera.jpg",
+        img: "img/remera.jpg",
         price: 35,
         size: "L"
     },
     {
         id: 5,
         name: "Remera XL",
-        img: "../img/remera.jpg",
+        img: "img/remera.jpg",
         price: 35,
         size: "XL"
     },
     {
         id: 6,
         name: "Buzo S",
-        img: "../img/buzo.jpg",
+        img: "img/buzo.jpg",
         price: 60,
         size: "S"
     },
     {
         id: 7,
         name: "Buzo M",
-        img: "../img/buzo.jpg",
+        img: "img/buzo.jpg",
         price: 60,
         size: "M"
     },
     {
         id: 8,
         name: "Buzo L",
-        img: "../img/buzo.jpg",
+        img: "img/buzo.jpg",
         price: 60,
         size: "L"
     },
     {
         id: 9,
         name: "Buzo XL",
-        img: "../img/buzo.jpg",
+        img: "img/buzo.jpg",
         price: 60,
         size: "XL"
     },
     {
         id: 10,
         name: "Campera S",
-        img: "../img/campera.jpg",
+        img: "img/campera.jpg",
         price: 110,
         size: "S"
     },
     {
         id: 11,
         name: "Campera M",
-        img: "../img/campera.jpg",
+        img: "img/campera.jpg",
         price: 110,
         size: "M"
     },
     {
         id: 12,
         name: "Campera L",
-        img: "../img/campera.jpg",
+        img: "img/campera.jpg",
         price: 110,
         size: "L"
     },
     {
         id: 13,
         name: "Campera XL",
-        img: "../img/campera.jpg",
+        img: "img/campera.jpg",
         price: 110,
         size: "XL"
     },
     {
         id: 14,
         name: "Pantalon S",
-        img: "../img/pantalon.jpg",
+        img: "img/pantalon.jpg",
         price: 75,
         size: "S"
     },
     {
         id: 15,
         name: "Pantalon M",
-        img: "../img/pantalon.jpg",
+        img: "img/pantalon.jpg",
         price: 75,
         size: "M"
     },
     {
         id: 16,
         name: "Pantalon L",
-        img: "../img/pantalon.jpg",
+        img: "img/pantalon.jpg",
         price: 75,
         size: "L"
     },
     {
         id: 17,
         name: "Pantalon XL",
-        img: "../img/pantalon.jpg",
+        img: "img/pantalon.jpg",
         price: 75,
         size: "XL"
     },
     {
         id: 18,
         name: "Sneakers",
-        img: "../img/zapatillas.jpg",
+        img: "img/zapatillas.jpg",
         price: 90,
         size: " "
     }
