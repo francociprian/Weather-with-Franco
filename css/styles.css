@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 
@@ -11,75 +12,91 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #868686;
-    display: flex;
-    justify-content: center;
+    background-color: #dcdcdd;
 }
 
 ul {
     list-style-type: none;
+    padding-left: 0.8rem;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: #F7F2E7;
 }
 
 /* BARRA DE NAVEGACION */
 header {
-    background-color: #141414;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 65px;
     z-index: 999;
 }
 
 .menu {
+    padding-top: 0.7rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-between;
 }
 
 .menu--layout {
-    max-width: 1400px;
+    max-width: 1700px;
     width: 100%;
     margin: 0 auto;
 }
-
-.menu__logo {
-    font-size: 2em;
-    font-family: "Alfa Slab One", cursive;
-    line-height: 65px;
-    letter-spacing: 1.5px;
-    padding: 0 0.5rem;
+.menu__nav {
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: #3C4245;
 }
-
-.menu__logo:hover {
-    color: #e93e74;
+.menu__nav li a:hover {
+    color: #764245;
 }
-
+.animation--active {
+    color: rgb(0, 0, 0);
+}
 .menu__btn {
     width: 100px;
-    background-color: #141414;
     border: none;
-    color: white;
-    font-size: 1.4rem;
-    line-height: 65px;
+    color: #F7F2E7;
+    font-size: 1.2rem;
     display: flex;
+    flex-direction: column;
 }
 
-.menu__btn a {
-    padding-right: 1rem;
-}
-
-.menu__btn a:hover {
-    color: #e93e74;
+.menu__btn button:hover {
+    color: #764245;
 }
 
 /* CONTENIDO */
+/* SECTION 1 */
 
+.bg__uno{
+    background-image: url(../img/tani.jpg);
+    background-position: center top;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inicio__text {
+    font-weight: 900;
+    font-family: "Alfa Slab One", cursive;
+    font-size: 10rem;
+    letter-spacing: 5px;
+    color: #bb8588;
+    color: #764245;
+}
+
+
+/* SECTION 2 */
 .container {
     width: 100%;
     padding: 4.5rem 0;
@@ -101,9 +118,9 @@ header {
 
 .stock__card {
     text-align: center;
-    border: 1.5px solid black;
     border-radius: 6px;
     padding-bottom: 5px;
+    background-color: #3C4245;
 }
 
 .stock__card--image {
@@ -114,18 +131,25 @@ header {
 
 .stock__card--nombre {
     font-size: 1.3em;
-    color: aliceblue;
+    color: #f0f8ff;
     padding: 10px 35px;
 }
 
 .stock__card--btn {
-    color: aliceblue;
+    color: #f0f8ff;
     text-decoration: none;
-    border: 1px solid aliceblue;
-    border-radius: 5px;
+    border: 1px solid #f0f8ff;
+    border-radius: 35px;
     padding: 5px 35px;
     cursor: pointer;
     margin-bottom: 10px;
+}
+.stock__card--btn:hover {
+    background-color: #e93e74;
+    background-color: #764245;
+    border: 1px solid #e93e74;
+    border: 1px solid #764245;
+    color: #f0f8ff;
 }
 
 /* BUTTON LIMPIAR CARRITO */
@@ -143,10 +167,18 @@ button {
 }
 
 .limpiar {
-    border: 1px solid aliceblue;
+    border: 1px solid #f0f8ff;
+    border-radius: 0.25rem;
     padding: 7px 30px;
     margin-top: 8px;
     margin-right: 15px;
+}
+.limpiar:hover {
+    background-color: #e93e74;
+    background-color: #764245;
+    border: 1px solid #e93e74;
+    border: 1px solid #764245;
+    color: #141414;
 }
 
 /* CARRITO NOMBRE, CANTIDAD, TOTAL */
@@ -157,7 +189,7 @@ button {
 
 .carrito__nombre {
     text-align: center;
-    color: white;
+    color: #f0f8ff;
     font-size: 2.2em;
     padding: 1rem 1rem;
 
@@ -178,35 +210,103 @@ button {
 /* ESTILO CONTENEDOR CARRITO */
 .carrito__container {
     padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .carrito__card {
     text-align: center;
     padding: 1rem 0;
-    border-bottom: 1px solid aliceblue;
+    border-bottom: 1px solid #f0f8ff;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .carrito__card--image {
-    width: 150px;
+    width: 25%;
+    padding-left: 10px;
+    justify-items: flex-start;
 }
-
+.carrito__card--card {
+    text-align: left;
+    width: 200px;
+}
+.carrito__card--nombre {
+    font-weight: 400;
+}
+.carrito__card--type {
+    padding-bottom: 10px;
+    font-weight: 300;
+}
+.carrito__card--price {
+    font-size: 1.8rem;
+    font-weight: 200;
+}
 
 /* OVERLAY CARRITO */
 .pushbar-carrito {
     z-index: 99999;
     background-color: #141414;
-    color: white;
+    color: #f0f8ff;
 }
+
 .pushbar-carrito .btn-cerrar {
-    display: flex; 
+    display: flex;
     flex-direction: row;
-    align-items: center; 
+    align-items: center;
     justify-content: space-between;
 }
 
 .pushbar-carrito .fa-times {
     padding: 0.5rem 1rem;
     background-color: #141414;
-    color: white;
+    color: #f0f8ff;
     font-size: 1.4rem;
+}
+
+.form-floating label {
+    color: #141414;
+}
+
+
+@media only screen and (max-width: 599px) {
+    ul {
+        padding-left: 0;
+    }
+    header {
+        padding: 1rem;
+    }
+    .menu {
+        justify-content: space-between;
+    }
+    .menu__nav {
+        font-size: 1.5rem;
+    }
+    .menu__btn {
+        font-size: 1.8rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu__btn-column {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    /* .menu__btn li {
+        padding-left: 10px;
+    } */
+    
+    .container-fluid{
+        width: 100%;
+    }
+    .inicio__text{
+        font-size: 4rem;
+    }
+    .stock__productos {
+        grid-template-columns: 350px;
+        gap: 2rem;
+    }
+    .stock__card--image {
+        width: 350px;
+    }
 }
