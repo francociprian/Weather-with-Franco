@@ -59,32 +59,16 @@ mostrarProductos = () => {
 }
 
 
-// function actualizarCarrito(){
-//     totalCarrito.innerText = carrito.reduce((acc,el) => acc + (el.precio * el.cantidad), 0)
-// }
-
 
 agregarAlCarrito = (id) => {
-    /*
+    
     const productosAgregados = stockProductos.find( producto => producto.id === id);
     carrito.push(productosAgregados);
     mostrarCarrito(carrito);
     precioTotal();
 
     localStorage.setItem('carrito', JSON.stringify(carrito)); 
-    */
-
-    let productoRepetido = carrito.find(producto => producto.id == id)
-    if (productoRepetido) {
-        productoRepetido.amount += 1;
-        actualizarCarrito();
-    } else {
-        const productosAgregados = stockProductos.find( producto => producto.id === id);
-        carrito.push(productosAgregados);
-        mostrarCarrito(carrito);
-        precioTotal();
-    }
-    localStorage.setItem('carrito', JSON.stringify(carrito));
+    
 }
 
 recuperarLocalStorage = () => {
@@ -122,10 +106,6 @@ function mostrarCarrito () {
         const priceProducto = document.createElement('p');
         priceProducto.classList.add('carrito__card--price');
         priceProducto.textContent = `$${producto.price}`;
-
-        const amountProducto = document.createElement('p');
-        amountProducto.classList.add('carrito__card--price');
-        amountProducto.textContent = `Cantidad: ${producto.amount}`;
 
         
         
