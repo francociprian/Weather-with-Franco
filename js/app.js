@@ -2,8 +2,24 @@
 
   let btn = document.querySelector("#btnObtenerClima");
 
+  errorToast = () => {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'bottom-end',
+      showConfirmButton: false,
+      timer: 1500,
+      background: '#3C4245',
+      color: '#F7F2E7'
+    })
+    Toast.fire({
+      icon: 'error',
+      title: 'Oops... Completar Ciudad'
+    })
+  }
+
   btn.addEventListener("click", () => {
-    let city = document.querySelector("#cityname").value;
+    let city = document.querySelector("#cityname").value.toLowerCase();
+    console.log(city)
 
     let key = "ba8865f37b122620faa7acdc436cbf69";
     let url =
@@ -12,6 +28,7 @@
       "&appid=" +
       key;
     //console.log(url);
+
     if (city != "") {
       fetch(url)
         .then((data) => {
@@ -23,9 +40,12 @@
           console.log(temperatura);
           let tempC = temperatura - 273.15;
           console.log(tempC);
+          let tempIcon =  clima.weather.description;
+          console.log(tempIcon)
+
 
           let p = document.querySelector("#temperatura");
-          p.innerHTML = tempC.toFixed(0) + "C /";
+          p.innerHTML = tempC.toFixed(0) + " " + "°C";
 
           if (tempC < 10) {
             p.className = "cold";
@@ -35,10 +55,6 @@
         })
         .catch((err) => console.log(err));
     } else {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Completar Ciudad'
-      })
+      errorToast();
     }
   });
