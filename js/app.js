@@ -40,12 +40,16 @@
           console.log(temperatura);
           let tempC = temperatura - 273.15;
           console.log(tempC);
-          let tempIcon =  clima.weather.description;
-          console.log(tempIcon)
+          let tempIcon =  clima;
 
 
           let p = document.querySelector("#temperatura");
           p.innerHTML = tempC.toFixed(0) + " " + "°C";
+
+          let icons = document.querySelector("#icons");
+          icons.setAttribute('src', `http://openweathermap.org/img/wn/${tempIcon.weather[0].icon}@2x.png`);
+
+          console.log(icons)
 
           if (tempC < 10) {
             p.className = "cold";
