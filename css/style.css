@@ -21,10 +21,12 @@ nav ul {
     align-items: center;
     justify-content: flex-start;
 }
+
 nav ul li h1 {
     font-size: 2rem;
     font-weight: 200;
 }
+
 nav ul li .logo {
     width: 80px;
 }
@@ -43,6 +45,7 @@ nav ul li .logo {
     align-items: center;
     gap: 30px;
 }
+
 .container__form label {
     font-size: 2rem;
 }
@@ -80,9 +83,9 @@ button {
     position: relative;
     transition: all 0.5s;
     z-index: 1;
-   }
-   
-   button::before {
+}
+
+button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -92,16 +95,34 @@ button {
     background-color: white;
     z-index: -1;
     transition: all 0.5s;
-   }
-   
-   button:hover::before {
+}
+
+button:hover::before {
     width: 100%;
-   }
-   
-   button:hover {
+}
+
+button:hover {
     color: black;
-   }
-   
-   button:active:before {
+}
+
+button:active:before {
     background: #b9b9b9;
-   }
+}
+
+/* INPUT */
+.css-input {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    border-width: 2px;
+    border-color: #ffffff;
+    background-color: #778899;
+    color: #ffffff;
+    border-style: solid;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px rgba(66,66,66,.74);
+    text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+.css-input:focus {
+    outline:none;
+}

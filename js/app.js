@@ -1,4 +1,4 @@
-  // ba8865f37b122620faa7acdc436cbf69
+
 
   let btn = document.querySelector("#btnObtenerClima");
 
@@ -21,7 +21,6 @@
     let city = document.querySelector("#cityname").value.toLowerCase();
     console.log(city)
 
-    let key = "ba8865f37b122620faa7acdc436cbf69";
     let url =
       "https://api.openweathermap.org/data/2.5/weather?q=" +
       city +
