@@ -2,40 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Check the weather data."
+    />
+    <meta
+      name="keywords"
+      content="weather forecast,weather,forecast,wind direction,climate,clouds,meteorology,precipitation"
+    />
+    <link rel="icon" href="/src/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather with Franco</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="robots" content="index, nofollow" />
+
+    <title>GeoWeather</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FCWeather" />
+    <meta
+      property="og:description"
+      content="Check the weather data."
+    />
+    <meta
+      name="image"
+      property="og:image"
+      content="./src/images/Banner512x512.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="600" />
+
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content="FCWeather" />
+    <meta name="author" content="Franco Ciprian" />
+
+    
+    <!-- <script>
+      window.myCallbackFunc = function () {
+        window.initOne && window.initOne()
+      }
+    </script> -->
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9792weT6nDvmOoMjmagr7ybocOXLd6dU&language=en&components=locality&libraries=places&callback=myCallbackFunc"
+    ></script>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><img class="logo" src="img/weather.png" alt="logo"></li>
-        <li><h1>Weather with Franco</h1></li>
-      </ul>
-    </nav>
-
-    <div class="container">
-      
-      <form action="#" class="container__form">
-        <label for="cityname">Nombre Ciudad</label>
-        <input type="text" id="cityname" class="css-input"/>
-        <button id="btnObtenerClima"> Obtener Clima
-        </button>
-      </form>
-
-    </div>
-    <div class="output"> 
-
-      <output>
-        <img src=" " alt="" id="icons">
-        <p id="temperatura"></p>
-      </output>
-
-    </div>
-
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="js/key.js"></script>
-  <script src="js/app.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
