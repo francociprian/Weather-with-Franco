@@ -1,5 +1,4 @@
-import { DAY, WEATHER_CODES } from '../Const'
-
+import { DAY, WEATHER_ICON } from '../Const'
 import Img from '../Utils/Img'
 import TempsData from '../Utils/TempsData'
 import { WeatherContext } from '../../context/WeatherContextProvider'
@@ -17,11 +16,11 @@ export default function ForecastCards({ active, setActive }) {
       {forecast?.forecastday?.map((day, index) => (
         <div
           key={day.date_epoch}
-          className={`border-[3px] rounded-md bg-slate-50  dark:bg-sky-900 h-44 w-full grid grid-cols-4 grid-rows-2 justify-center items-center p-6 cursor-pointer ${
+          className={`border-[1.5px] rounded-md h-44 w-full grid grid-cols-4 grid-rows-2 justify-center items-center p-6 cursor-pointer ${
             active === index
-              ? 'border-black dark:border-cardGray bg-slate-200'
+              ? 'border-slate-400 dark:border-cardGray bg-zinc-50 dark:bg-slate-700'
               : 
-              'border-cardGray dark:border-slate-900 dark:bg-sky-900'
+              'border-cardGray dark:border-slate-700 bg-zinc-200 dark:bg-slate-800'
           }`}
           onClick={() => setActive(index)}
         >
@@ -35,7 +34,7 @@ export default function ForecastCards({ active, setActive }) {
           </div>
           <Img
             className='col-start-4 place-self-end'
-            src={WEATHER_CODES[day.day.condition.code][0]}
+            src={WEATHER_ICON[day.day.condition.code][0]}
             alt='Location'
             width={70}
             height={70}

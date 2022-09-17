@@ -8,7 +8,6 @@ import { ThemeContext } from '../../context/themeContext'
 export default function CurrentDayChart() {
   const { theme } = useContext(ThemeContext)
   const { degreeType, forecast } = useContext(WeatherContext)
-console.log(theme)
   const [data, setData] = useState([])
   useEffect(() => {
     setData([])

@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react'
 const useImage = (fileName) => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const [image, setImage] = useState(null)
+  const [image, setImage] = useState(null) 
 
   useEffect(() => {
     const fetchImage = async () => {
       try {
-        const response = await import('../img/' + fileName + '.png')
+        const response = await import(`../img/day/${fileName}.png`)
         setImage(response.default)
       } catch (err) {
         setError(err)

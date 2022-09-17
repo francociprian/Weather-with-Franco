@@ -1,6 +1,5 @@
 import { useContext, useEffect } from 'react'
-
-import Footer from './HeaderFooter/Footer'
+// import Footer from './HeaderFooter/Footer'
 import Header from './HeaderFooter/Header'
 import Loading from './Loading.jsx'
 import MainPanel from './MainPanel'
@@ -18,7 +17,6 @@ export default function Routes() {
     }
   }, [location])
 
-  console.log(location)
   return location ? (
     <>
       <Header />

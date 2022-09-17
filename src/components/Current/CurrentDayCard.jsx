@@ -1,8 +1,6 @@
-import { DAY, WEATHER_CODES } from '../Const'
-
+import { DAY, WEATHER_ICON } from '../Const'
 import CurrentDayChart from './CurrentDayChart'
 import Img from '../Utils/Img'
-// import Map from '../Utils/Map'
 import Temp from '../../img/Temp.png'
 import { WeatherContext } from '../../context/WeatherContextProvider'
 import WindHumData from '../Utils/WindHumData'
@@ -23,7 +21,7 @@ export default function CurrentDayCard() {
       data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100" }'
     >
       <div 
-        className='relative rounded-xl border-[3px] bg-slate-100 dark:bg-slate-700 dark:border-slate-900 col-span-2 h-fit w-full grid grid-cols-2 sm:grid-cols-4 grid-rows-4 justify-center items-center px-5 pb-3 md:pb-8 sm:px-6'
+        className='relative rounded-xl border-[1.5px] bg-slate-50 dark:bg-slate-700 dark:border-slate-900 col-span-2 h-fit w-full grid grid-cols-2 sm:grid-cols-4 grid-rows-4 justify-center items-center px-5 pb-3 md:pb-8 sm:px-6'
         >
         <div className='col-start-1 row-start-1'>
           <h3 className='mt-10 text-3xl place-self-start dark:text-gray-100'>
@@ -36,7 +34,7 @@ export default function CurrentDayCard() {
         <Img
           className='col-start-4 mt-5 place-self-end'
           src={
-            WEATHER_CODES[current.condition?.code]?.[
+            WEATHER_ICON[current.condition?.code]?.[
               (current?.condition?.code === 1000 && current?.is_day) === 0
                 ? 1
                 : 0
@@ -96,10 +94,6 @@ export default function CurrentDayCard() {
           </div>
         </div>
       </div>
-      {/* <Map
-        isMarkerShown
-        className=' items-end w-full row-span-1 h-96 md:h-full'
-      /> */}
     </div>
   )
 }

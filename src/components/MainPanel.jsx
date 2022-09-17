@@ -4,11 +4,12 @@ import { useContext, useEffect, useState } from 'react'
 
 import { SearchBar } from '../components/Utils'
 import { WeatherContext } from '../context/WeatherContextProvider'
-import useDate from '../hooks/useDate'
+import { useDate, TimeClock } from '../hooks/useDate'
 
 export default function MainPanel() {
   const [active, setActive] = useState(0)
-  const { time, date } = useDate()
+  const { currentDate } = useDate()
+  const { currentTime } = TimeClock()
   const { address, forecast } = useContext(WeatherContext)
   useEffect(() => {
     const transition = () => {
@@ -27,7 +28,7 @@ export default function MainPanel() {
     }
     transition()
   }, [])
-
+  
   return (
     <div className='relative z-0 grid justify-center min-h-screen gap-3 px-4 bg-white dark:bg-slate-800 pt-20 pb-16'>
       {location ? (
@@ -41,15 +42,16 @@ export default function MainPanel() {
                 Local time:
               </h2>
               <h2 className='font-bold text-7xl dark:text-gray-100'>
-                {time || ''}
+                {/* {time || ''} */}
+                {currentTime}
               </h2>
               <h2 className='col-span-2 text-2xl dark:text-gray-100'>
-                {date || ''}{' '}
+                {currentDate || ''}
               </h2>
             </div>
 
             <div className='w-full col-span-1 gap-3 text-left md:col-span-2'>
-              <SearchBar />
+              <SearchBar />  
               <div className='flex items-center justify-end w-full my-3'>
                 {/* <img
                   src={locationImage}
@@ -75,24 +77,13 @@ export default function MainPanel() {
             Current Day
           </h2>
           <CurrentDayCard />
-          {/* <div className='relative flex items-center' >
-            <div className='lg:block hidden dark:text-gray-100'>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-              </svg>
-            </div>
+          <div className='relative flex items-center' >
             <div className='whitespace-nowrap overflow-x-auto overflow-y-hidden max-w-[90vw] m-auto '>
               {forecast?.forecastday?.[0].hour.map((element, index) => (
                   <CurrentHourCard key={index} element={element} />
               ))}
             </div>
-            <div className='lg:block hidden dark:text-gray-100'>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </div>
-          </div> */}
-
+          </div>
           <h2
             className='my-5 text-3xl font-semibold delay-300 duration-700 transform opacity-0 transition-all translate-y-12 ease-out dark:text-gray-100'
             data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100" }'

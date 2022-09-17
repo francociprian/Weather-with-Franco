@@ -1,9 +1,10 @@
+import React, { useState } from "react";
 import { DAY, MONTHS } from '../components/Const'
 
 import { WeatherContext } from '../context/WeatherContextProvider'
 import { useContext } from 'react'
 
-const useDate = () => {
+export const useDate = () => {  
   const { location } = useContext(WeatherContext)
 
   const { localtime } = location || ''
@@ -13,9 +14,20 @@ const useDate = () => {
   const year = localtime?.slice(0, 4)
   const currentDate = ` ${day} ${MONTHS[month]} ${year}`
   const weekday = new Date(currentDate).getDay() || 0
-
   const date = `${DAY[weekday] + ', ' + currentDate}`
-  return { time, date }
+
+  return { time, date, currentDate }
 }
 
-export default useDate
+
+export const TimeClock = () => {  
+  let time = new Date().toLocaleTimeString();
+  const [currentTime, setCurrentTime] = useState(time);
+  const updateTime = () => {
+    let time = new Date().toLocaleTimeString();
+    setCurrentTime(time);
+  };
+  setInterval(updateTime, 1000);
+
+  return { currentTime }
+}

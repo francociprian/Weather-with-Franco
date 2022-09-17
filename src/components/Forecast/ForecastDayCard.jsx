@@ -1,6 +1,5 @@
-import { DAY, WEATHER_CODES } from '../Const'
+import { DAY, WEATHER_ICON } from '../Const'
 import { useContext, useEffect, useState } from 'react'
-
 import { ForecastDayChart } from '../Forecast'
 import { Img } from '../Utils'
 import Temp from '../../img/Temp.png'
@@ -31,7 +30,7 @@ export default function ForecastDayCard({ active }) {
       className='grid grid-cols-1 gap-y-3 md:gap-y-0 gap-x-0 md:gap-x-3 md:grid-cols-3 delay-300 duration-700 transform opacity-0 transition-all translate-y-12 ease-out'
       data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100" }'
     >
-      <div className='relative rounded-xl  border-[3px] bg-slate-100 dark:bg-slate-700 mt-5 border-cardGray  dark:border-slate-900 col-span-3 h-96 w-full grid grid-cols-2 sm:grid-cols-4 grid-rows-4 justify-center items-center px-5 sm:px-10'>
+      <div className='relative rounded-xl  border-[1.5px] bg-slate-50 dark:bg-slate-700 mt-5 border-cardGray  dark:border-slate-900 col-span-3 h-96 w-full grid grid-cols-2 sm:grid-cols-4 grid-rows-4 justify-center items-center px-5 sm:px-10'>
         <div className='col-start-1 row-start-1'>
           <h3 className='mt-10 text-3xl place-self-start dark:text-gray-100'>
             {DAY[new Date(day?.date).getDay()]}
@@ -44,7 +43,7 @@ export default function ForecastDayCard({ active }) {
         <Img
           className='mt-5 place-self-end'
           src={
-            WEATHER_CODES[day?.day?.condition?.code]?.[
+            WEATHER_ICON[day?.day?.condition?.code]?.[
               (day?.day?.condition?.code === 1000 && day?.day?.is_day) === 0
                 ? 1
                 : 0
