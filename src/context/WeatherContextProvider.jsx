@@ -24,8 +24,8 @@ export default function WeatherContextProvider(props) {
 
     dispatch({ type: 'SET_COORDS', payload: location })
     const url = `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${latitude}%2C${longitude}&days=3`
-    // const url = `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${IPv4}&days=3`
-    fetch(url, OPTIONS)
+    try {
+      fetch(url, OPTIONS)
       .then((res) => 
         res.json()
       )
@@ -42,7 +42,37 @@ export default function WeatherContextProvider(props) {
           payload: `${name}, ${region}, ${country}`
         })
       })
+    } catch (error) {
+      console.log(error)
+    }
   }
+  // const getWeather = async (location) => {
+  //   const { latitude, longitude } = location
+
+  //   dispatch({ type: 'SET_COORDS', payload: location })
+  //   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=ba8865f37b122620faa7acdc436cbf69&units=metric`
+  //   try {
+  //     fetch(url)
+  //     .then((res) => 
+  //       res.json()
+  //     )
+  //     .then((data) => {
+  //       console.log(data)
+  //       dispatch({
+  //         type: 'GET_WEATHER',
+  //         payload: data
+  //       })
+  //       const { location } = data
+  //       const { name, region, country } = location
+  //       dispatch({
+  //         type: 'CHANGE_ADDRESS',
+  //         payload: `${name}, ${region}, ${country}`
+  //       })
+  //     })
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
   const searchWeather = ({ newAddress }) => {
     const url = `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${newAddress}&days=3`
     try {
